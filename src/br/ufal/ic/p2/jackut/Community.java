@@ -10,9 +10,34 @@ public class Community implements Serializable{
   String description;
   ArrayList<User> subscribers;
 
-  protected Community(User owner, String name, String descprition) {
+  public Community(User owner, String name, String description) {
     this.owner = owner;
     this.name = name;
-    this.description = descprition;
+    this.description = description;
+  }
+  public static long getSerialversionuid() {
+    return serialVersionUID;
+  }
+
+  public User getOwner() {
+    return owner;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public ArrayList<User> getSubscribers() {
+    return subscribers;
+  }
+
+  @Override
+  public String toString() {
+    return "Community [owner=" + owner + ", name=" + name + ", description=" + description + ", subscribers="
+        + subscribers + "]";
   }
 }
